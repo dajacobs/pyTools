@@ -8,7 +8,7 @@ TCP_PORT     = 8000
 BUFFER_SIZE  = 1024
 
 # Bind TCP set and set socket to listen
-serverSocket.bind('', TCP_PORT)
+serverSocket.bind(('', TCP_PORT))
 serverSocket.listen(1)
 
 # Conditional loop for connection
