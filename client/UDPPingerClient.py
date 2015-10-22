@@ -2,7 +2,7 @@
 
 # Module imports
 from socket import *
-from time import time
+import time
 
 # Socket variables
 servName = 'localhost'
