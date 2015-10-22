@@ -9,7 +9,7 @@ servName = 'localhost'
 servPort = 12000
 clientSock = socket(AF_INET, SOCK_DGRAM)
 server_addr = (servName, servPort)
-sock.settimeout(1)
+clientSock.settimeout(1)
 
 # Try block for pinger
 try:
