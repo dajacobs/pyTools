@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 
 # Module imports
-import socket
-import time
+from socket import *
+from time import time
 
 # Socket variables
-sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-server_addr = ('localhost', 12000)
+servName = 'localhost'
+servPort = 12000
+clientSock = socket(AF_INET, SOCK_DGRAM)
+server_addr = (servName, servPort)
 sock.settimeout(1)
 
 # Try block for pinger
