@@ -18,9 +18,9 @@ try:
 		message = 'Ping #' +str(i)+ " " +time.ctime(start)
 		# Try block for send/receive message
 		try: 
-			sent = sock.sendto(message, server_addr)
+			sent = clientSock.sendto(message, server_addr)
 			print 'Sent ' +message
-			data, server = sock.recvfrom(4096)
+			data, server = clientSock.recvfrom(4096)
 			print 'Received ' +data
 			end = time.time()
 			diff = end - start
@@ -28,4 +28,4 @@ try:
 		except socket.timeout:
 			print '#' +str(i)+ 'Time out\n'
 finally:
-	sock.close()				
+	clientSock.close()				
